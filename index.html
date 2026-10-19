@@ -4,156 +4,367 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limpieza Láser Industrial - Nexport</title>
+
     <style>
         :root {
-            --primary-color: #007a48; /* Verde corporativo Nexport */
+            --primary-color: #007a48;
             --dark-color: #1a1a1a;
             --light-color: #f8f9fa;
-            --accent-color: #25D366; /* Verde WhatsApp */
+            --accent-color: #25D366;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { color: var(--dark-color); line-height: 1.6; background-color: #fff; }
-        header { background-color: var(--primary-color); color: white; padding: 15px; text-align: center; font-weight: bold; letter-spacing: 1px; }
-        .container { width: 92%; max-width: 800px; margin: auto; padding: 20px 0; }
-        
-        .hero { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #ffffff, #f1f5f2); border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e1e8e3; }
-        .hero h1 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 12px; font-weight: 800; line-height: 1.3; }
-        .hero .subtitle { font-size: 1.1rem; color: #555; margin-bottom: 8px; }
-        .hero .model-badge { display: inline-block; background-color: #e6f4ea; color: var(--primary-color); font-weight: bold; padding: 4px 12px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 20px; }
-        
-        .btn-whatsapp { display: inline-block; background-color: var(--accent-color); color: white; padding: 16px 32px; text-align: center; text-decoration: none; font-size: 1.2rem; font-weight: bold; border-radius: 50px; margin: 15px 0; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.3s ease; }
-        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4); }
-        .hero-tagline { font-size: 0.9rem; color: #666; font-style: italic; }
-        
-        h2 { color: var(--primary-color); margin: 35px 0 15px 0; border-bottom: 2px solid #e6f4ea; padding-bottom: 8px; font-size: 1.4rem; }
-        ul { margin-left: 20px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        
-        /* Sección de Galería de Imágenes */
-        .image-gallery { display: grid; grid-template-columns: 1fr; gap: 15px; margin: 25px 0; }
-        @media (min-width: 576px) { .image-gallery { grid-template-columns: 1fr 1fr; } }
-        .image-card { background: var(--light-color); border-radius: 8px; overflow: hidden; border: 1px solid #eef2f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); text-align: center; }
-        .image-card img { width: 100%; height: 200px; object-fit: cover; display: block; background-color: #ccc; }
-        .image-card p { padding: 10px; font-size: 0.85rem; font-weight: bold; color: #444; background: #fff; border-top: 1px solid #eee; }
 
-        .guarantee-badge { background-color: #e6f4ea; border-left: 5px solid var(--primary-color); padding: 18px; margin: 25px 0; border-radius: 6px; }
-        .guarantee-badge h3 { color: var(--primary-color); margin-bottom: 6px; font-size: 1.1rem; }
-        
-        .table-responsive { overflow-x: auto; margin-top: 15px; border-radius: 8px; border: 1px solid #eee; }
-        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background-color: #f1f5f2; font-weight: bold; color: var(--dark-color); }
-        tr:last-child td { border-bottom: none; }
-        tr:hover { background-color: #fafafa; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-        footer { text-align: center; padding: 25px; background: var(--dark-color); color: #aaa; font-size: 0.85rem; margin-top: 50px; border-top: 3px solid var(--primary-color); }
+        body {
+            color: var(--dark-color);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #fff, #f1f5f2);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.05);
+            border: 1px solid #e1e8e3;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .model-badge {
+            display: inline-block;
+            background: #e6f4ea;
+            color: var(--primary-color);
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(37,211,102,.3);
+            transition: all .3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-tagline {
+            font-size: .9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 35px 0 15px;
+            border-bottom: 2px solid #e6f4ea;
+            padding-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        @media (min-width: 576px) {
+            .image-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .image-card {
+            background: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eef2f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+            text-align: center;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background: #eee;
+        }
+
+        .image-card p {
+            padding: 10px;
+            font-size: .85rem;
+            font-weight: bold;
+            color: #444;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+
+        .guarantee-badge {
+            background: #e6f4ea;
+            border-left: 5px solid var(--primary-color);
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .guarantee-badge h3 {
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .95rem;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #f1f5f2;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--dark-color);
+            color: #aaa;
+            font-size: .85rem;
+            margin-top: 50px;
+            border-top: 3px solid var(--primary-color);
+        }
     </style>
 </head>
+
 <body>
 
-    <header>
-        NEXPORT · EQUIPOS INDUSTRIALES
-    </header>
+<header>
+    NEXPORT · EQUIPOS INDUSTRIALES
+</header>
 
-    <div class="container">
-        <section class="hero">
-            <h1>¿Buscas optimizar tus procesos?<br>Conoce la Revolución de la Limpieza Láser Industrial</h1>
-            <p class="subtitle">Elimina óxido pesado, pintura, resinas y grasa al instante, sin químicos ni insumos abrasivos.</p>
-            <span class="model-badge">Equipo Oficial: AccTek AKQ-6000 (6000W)</span>
-            
-            <br>
-            <!-- Enlace directo corregido a la API nativa de WhatsApp -->
-            <a href="https://whatsapp.com" class="btn-whatsapp" target="_blank">
-                💬 Solicitar Cotización por WhatsApp
-            </a>
-            
-            <p class="hero-tagline">Limpieza ecológica de alta precisión · Cero residuos secundarios</p>
-        </section>
+<main class="container">
 
-        <!-- SECCIÓN DE IMÁGENES DEL EQUIPO -->
-        <h2>Galería del Equipo y Aplicaciones</h2>
-        <div class="image-gallery">
-            <div class="image-card">
-                <!-- Imagen representativa de la estructura externa de la máquina AKQ-6000 -->
-                <img src="https://unsplash.com" alt="Máquina Láser Industrial AccTek">
-                <p>Estación Industrial AccTek AKQ-6000</p>
-            </div>
-            <div class="image-card">
-                <!-- Imagen representativa del cabezal/pistola portátil de limpieza industrial -->
-                <img src="https://unsplash.com" alt="Cabezal de Limpieza Láser">
-                <p>Pistola Ergonómica de Limpieza Relfa 6000W</p>
-            </div>
-            <div class="image-card" style="grid-column: span 1;">
-                <!-- Imagen de muestra de remoción técnica de óxido pesado -->
-                <img src="https://unsplash.com" alt="Remoción de óxido pesado antes y después">
-                <p>Aplicación de Limpieza de Óxido de Fibra Óptica</p>
-            </div>
+    <section class="hero">
+        <h1>
+            ¿Buscas optimizar tus procesos?<br>
+            Conoce la Revolución de la Limpieza Láser Industrial
+        </h1>
+
+        <p class="subtitle">
+            Elimina óxido pesado, pintura, resinas y grasa,
+            sin químicos ni insumos abrasivos.
+        </p>
+
+        <span class="model-badge">
+            Equipo Oficial: AccTek AKQ-6000 (6000W)
+        </span>
+
+        <br>
+
+        <a
+            href="https://wa.me/56998378249?text=Hola%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20el%20equipo%20de%20limpieza%20l%C3%A1ser%20industrial."
+            class="btn-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            💬 Solicitar Cotización por WhatsApp
+        </a>
+
+        <p class="hero-tagline">
+            Limpieza ecológica de alta precisión · Cero residuos secundarios
+        </p>
+    </section>
+
+    <h2>Galería del Equipo y Aplicaciones</h2>
+
+    <div class="image-gallery">
+
+        <div class="image-card">
+            <img
+                src="https://www.accteklaser.com/wp-content/uploads/elementor/thumbs/Flexible-Mobile-Design-roe0rm8tpscwxagdcu1xzg6n0fu97ss8kqkeksqetw.jpg"
+                alt="Máquina de limpieza láser industrial AccTek"
+                loading="lazy"
+                onerror="this.onerror=null;this.alt='Imagen no disponible';"
+            >
+            <p>Estación Industrial AccTek AKQ-6000</p>
         </div>
 
-        <section class="guarantee-badge">
-            <h3>🛡️ Respaldo Oficial y Garantía Extendida Nexport</h3>
-            <p>Cuenta con <strong>3 años de garantía estructurada</strong> para el chasis completo de la máquina y <strong>2 años</strong> dedicados para el generador láser MAX. Ofrecemos soporte de ingeniería y asistencia técnica remota inmediata.</p>
-        </section>
+        <div class="image-card">
+            <img
+                src="https://www.accteklaser.com/wp-content/uploads/elementor/thumbs/Ergonomic-Handheld-Laser-Cleaning-Head-roe0rcuftg01p6u0vpzoaik12l4l2tqx7g1js14ck4.jpg"
+                alt="Cabezal portátil de limpieza láser"
+                loading="lazy"
+                onerror="this.onerror=null;this.alt='Imagen no disponible';"
+            >
+            <p>Pistola Ergonómica de Limpieza Relfa 6000W</p>
+        </div>
 
-        <section>
-            <h2>Velocidad y Rendimiento Real Certificado</h2>
-            <ul>
-                <li><strong>Eliminación de Óxido Extremo (Rust):</strong> Hasta <strong>90 m²/h</strong>.</li>
-                <li><strong>Capas Complejas de Oxidación:</strong> Rendimiento técnico de <strong>27 m²/h</strong>.</li>
-                <li><strong>Decapado de Pintura Industrial:</strong> Remoción fluida de hasta <strong>20 m²/h</strong>.</li>
-                <li><strong>Ancho de Limpieza Configurable:</strong> Rango focal regulable entre 200 mm y 500 mm.</li>
-            </ul>
-        </section>
+        <div class="image-card">
+            <img
+                src="https://www.accteklaser.com/wp-content/uploads/elementor/thumbs/Laser-Cleaning-Samples-8-roe132vvpgeb5c1kpde0qq10f7tnuyf5jw7mvm2xo8.jpeg"
+                alt="Muestra de limpieza láser de superficies metálicas"
+                loading="lazy"
+                onerror="this.onerror=null;this.alt='Imagen no disponible';"
+            >
+            <p>Aplicación de Limpieza de Óxido</p>
+        </div>
 
-        <section>
-            <h2>Especificaciones Técnicas de Fábrica</h2>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Parámetro Técnico</th>
-                            <th>Ficha Oficial de Componentes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Modelo Comercial</strong></td>
-                            <td>AccTek AKQ-6000</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tecnología del Emisor</strong></td>
-                            <td>Láser de fibra pura (Q-Switched)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Potencia Nominal</strong></td>
-                            <td>6000W Ajustables desde el tablero de mandos</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Pistola Óptica</strong></td>
-                            <td>Cabezal ultraligero Relfa de 6kW enfriado por agua</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Generador de Energía</strong></td>
-                            <td>Módulo de Fibra MAX de alta estabilidad</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Extensión de Trabajo</strong></td>
-                            <td>Fibra óptica reforzada de 20 metros de longitud</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Módulo de Enfriamiento</strong></td>
-                            <td>Refrigeración líquida por agua con Chiller Industrial S&A</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Panel de Operación</strong></td>
-                            <td>Pantalla táctil HD de 10 pulgadas integrada al chasis</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Alimentación Requerida</strong></td>
-                            <td>Conexión industrial trifásica de 380V (50/60Hz)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Dimensiones de Operación</strong></td>
-                            <td>1550mm x 880mm x 1470mm | Peso operativo: 305 kg</td>
-                        </tr>
-                        <tr>
+    </div>
+
+    <section class="guarantee-badge">
+        <h3>🛡️ Respaldo Oficial y Garantía Extendida Nexport</h3>
+        <p>
+            Cuenta con 3 años de garantía estructurada para el chasis
+            completo de la máquina y 2 años para el generador láser MAX.
+            Ofrecemos soporte de ingeniería y asistencia técnica remota.
+        </p>
+    </section>
+
+    <section>
+        <h2>Velocidad y Rendimiento Real Certificado</h2>
+        <ul>
+            <li><strong>Eliminación de óxido extremo:</strong> hasta 90 m²/h.</li>
+            <li><strong>Capas complejas de oxidación:</strong> 27 m²/h.</li>
+            <li><strong>Decapado de pintura industrial:</strong> hasta 20 m²/h.</li>
+            <li><strong>Ancho de limpieza configurable:</strong> entre 200 mm y 500 mm.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Especificaciones Técnicas de Fábrica</h2>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parámetro Técnico</th>
+                        <th>Ficha de Componentes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><strong>Modelo Comercial</strong></td>
+                        <td>AccTek AKQ-6000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tecnología del Emisor</strong></td>
+                        <td>Láser de fibra pura (Q-Switched)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Potencia Nominal</strong></td>
+                        <td>6000W</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pistola Óptica</strong></td>
+                        <td>Cabezal Relfa de 6kW enfriado por agua</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Generador de Energía</strong></td>
+                        <td>Módulo de fibra MAX</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Extensión de Trabajo</strong></td>
+                        <td>Fibra óptica de 20 metros</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Módulo de Enfriamiento</strong></td>
+                        <td>Chiller industrial S&A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Panel de Operación</strong></td>
+                        <td>Pantalla táctil HD de 10 pulgadas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alimentación Requerida</strong></td>
+                        <td>380V trifásica (50/60Hz)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dimensiones</strong></td>
+                        <td>1550 × 880 × 1470 mm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    NEXPORT · EQUIPOS INDUSTRIALES
+</footer>
+
+</body>
+</html>
